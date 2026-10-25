@@ -1,6 +1,11 @@
 import pygame, random
+import sys, os
 
 pygame.init()
+
+def resource_path(rel):
+    base = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base, rel)
 
 PPC = 13  # pixel per cel
 PAD = 8  # padding for exported sprite
@@ -29,9 +34,9 @@ smol = pygame.font.SysFont(None, 24)
 
 
 # Colours
-WIN_BG = (79, 74, 71)
-FIL = (60, 56, 64)
-BORD_COL = (46, 42, 49)
+WIN_BG = (65, 94, 155)
+FIL = (81, 77, 74)
+BORD_COL = (45, 39, 48)
 GRID_L = (70, 65, 74, 140)
 TXT = (251, 251, 251)
 NEXT = (216, 213, 219)
@@ -62,7 +67,7 @@ def normal(cells):
 
 def b_tile(kind):
     # each rotation cut sprite into 1 tile p cel
-    img = pygame.image.load(f"Assets/{kind}.png").convert_alpha()
+    img = pygame.image.load(resource_path(f"Assets/{kind}.png")).convert_alpha()
     size = SIZES.get(kind, 3)
     cells = list(SHAPES[kind])
     result = []
