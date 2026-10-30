@@ -6,3 +6,5 @@ Hello technically I have ever made a game using python but I just made tetris si
 I technically forgot to edit his but the game is done
 This is just like every tetris game where there is save, hard drop, soft drop and seeing the next pieces. But the art itself I drew it from scratch :).
 Game link: https://willylim.itch.io/a-simple-tetris-with-cool-art
+
+the code are in master branch (really doesnt understand github)
